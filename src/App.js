@@ -1,25 +1,19 @@
-import logo from './logo.svg';
-import './App.css';
+import React from 'react';
+import { Layout } from 'antd';
+import UserForm from './components/UserForm';
 
-function App() {
+
+const { Header, Content } = Layout;
+
+const App = () => {
   return (
-    <div className="App">
-      <header className="App-header">
-        <img src={logo} className="App-logo" alt="logo" />
-        <p>
-          Edit <code>src/App.js</code> and save to reload.
-        </p>
-        <a
-          className="App-link"
-          href="https://reactjs.org"
-          target="_blank"
-          rel="noopener noreferrer"
-        >
-          Learn React
-        </a>
-      </header>
-    </div>
+    <Layout>
+      <Header style={{ color: 'white', textAlign: 'center', fontSize: '24px',backgroundColor:"blue" }}>Form Application</Header>
+      <Content style={{ padding: '50px' }}>
+        <UserForm />
+      </Content>
+    </Layout>
   );
-}
+};
 
 export default App;
